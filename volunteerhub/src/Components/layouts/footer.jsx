@@ -24,21 +24,11 @@ export default function Footer() {
               title="Company"
               className="inline-flex items-center"
             >
-              <svg
-                className="w-8 text-teal-accent-400"
-                viewBox="0 0 24 24"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeMiterlimit="10"
-                stroke="currentColor"
-                fill="none"
-              >
-                <rect x="3" y="1" width="7" height="12" />
-                <rect x="3" y="17" width="7" height="6" />
-                <rect x="14" y="1" width="7" height="6" />
-                <rect x="14" y="11" width="7" height="12" />
-              </svg>
+              <img
+                className="h-14 w-auto "
+                src="/images/VolunteerHUBlogo.svg"
+                alt="VolunteerHUB logo"
+              />
               <span className="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
                 VolunteerHUB
               </span>
@@ -75,7 +65,7 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            <div  className="mx-10">
+            <div className="mx-10">
               <p className="font-semibold tracking-wide text-gray-100">
                 Take Action
               </p>
@@ -100,10 +90,10 @@ export default function Footer() {
               </p>
               <ul className="text-xxl mt-7 pt-0.5">
                 <li className="mb-1.5 hover:text-black">
-                  <a href="/">Contact Us</a>
+                  <a href="/contactus">Contact Us</a>
                 </li>
                 <li className="mb-1.5 hover:text-black">
-                  <a href="/">FAQs</a>
+                  <a href="/faq">FAQs</a>
                 </li>
                 <li className="mb-1.5 hover:text-black">
                   <a href="/">Blog</a>

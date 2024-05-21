@@ -1,10 +1,10 @@
 import React from "react";
-import ChatCard from "../Cardcomponents/chatCard";
+import ChatCard from "../../Cardcomponents/chatCard";
 export default function MessagePage() {
   return (
-    <div>
-      <div className="flex flex-row">
-        <div>
+    <div className="sticky top-0">
+      <div className="flex flex-row w-full">
+        <div className="hidden md:flex">
           <ul className="menu bg-base-200 rounded-box px-4 border-r-2 h-screen pt-2">
             <li className="mb-4">
               <a className="tooltip tooltip-right" data-tip="Home" href="/">
@@ -62,8 +62,10 @@ export default function MessagePage() {
             </li>
           </ul>
         </div>
-        <div className="w-1/4 border-r-2 px-2 h-screen overflow-y-scroll pt-1">
-          <h1 className="text-2xl font-bold pl-2">Chats</h1>
+        <div className="w-full border-r-2 px-2 h-screen overflow-y-scroll pt-1">
+          <h1 className="text-2xl font-bold pl-2 text-center md:text-left w-full">
+            Chats
+          </h1>
           <div className="relative mt-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +82,7 @@ export default function MessagePage() {
             <input
               type="text"
               placeholder="Search for volunteer opportunities"
-              className="rounded-2xl p-2 sm:pl-8 md:pl-8 lg:pl-9 w-full sm:w-3/4 md:w-11/12 focus:text-left outline-none bg-gray-100 focus:outline-slate-100 focus:placeholder-transparent focus:pl-10 truncate focus:w-3/4"
+              className="rounded-2xl p-2 pl-8 lg:pl-9 w-full sm:w-3/4 md:w-full focus:text-left outline-none bg-gray-100 focus:outline-slate-100 placeholder-gray-500 sm:placeholder-transparent md:placeholder-gray-500 focus:placeholder-transparent focus:pl-10 truncate mb-8"
             />
           </div>
           <div className="w-full">

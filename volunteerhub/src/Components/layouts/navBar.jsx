@@ -4,13 +4,6 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useLocation } from "react-router-dom";
 
-// const navigation = [
-//   { name: "Home", href: "#", current: true },
-//   { name: "Volunteer", href: "/volunteer", current: false },
-//   { name: "Catagories", href: "#", current: false },
-//   { name: "About", href: "#", current: false },
-// ];
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
@@ -30,8 +23,8 @@ export default function NavBar() {
       current: location.pathname === "/category",
     },
     {
-      name: "Post",
-      href: "/post",
+      name: "Blog",
+      href: "/blog",
       current: location.pathname === "/post",
     },
     // { name: "Login", href: "/login", current: location.pathname === "/login" },
@@ -62,21 +55,21 @@ export default function NavBar() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center sm:items-stretch place-content-center">
-                <div className="flex flex-row place-items-center items-center">
-                  <div className="flex flex-shrink-0 items-center place-items-start">
+              <div className="flex flex-1 sm:items-stretch items-center  justify-center">
+                <div className="flex flex-row place-items-center">
+                  <div className="flex flex-shrink-0 items-center">
                     <img
-                      className="h-8 w-auto"
-                      src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                      className="h-14 w-auto"
+                      src="/images/VolunteerHUBlogo.svg"
                       alt="VolunteerHUB logo"
                     />
                   </div>
                   <h2 className="mx-5">VolunteerHUB</h2>
                 </div>
-                <div className="hidden md:block w-full">
+                <div className="hidden md:block w-full content-center">
                   {/* Window screen View */}
-                  <div className="grid grid-cols-1 sm:grid-cols-4">
-                    <div className="flex sm:space-x-4 justify-end lg:justify-end w-full sm:w-3/4 col-span-3 ml-0 lg:ml-0 md:ml-24 ">
+                  <div className="grid grid-cols-1 sm:grid-cols-4 items-center">
+                    <div className="flex sm:space-x-4 items-center justify-end lg:justify-end w-full sm:w-3/4 col-span-3 ml-0 lg:ml-0 md:ml-24 ">
                       {navigation.map((item) => (
                         <a
                           key={item.name}
@@ -111,7 +104,7 @@ export default function NavBar() {
                       <input
                         type="text"
                         placeholder="Search for volunteer opportunities"
-                        className="rounded-2xl p-1 sm:pl-8 md:pl-8 lg:pl-9 w-full sm:w-3/4 focus:text-left outline-none focus:outline-slate-100 focus:placeholder-transparent focus:pl-10 truncate focus:w-3/4"
+                        className="rounded-2xl p-1 sm:pl-8 md:pl-8 lg:pl-9 w-full sm:w-3/4 focus:text-left focus:ring-1 focus:placeholder-transparent focus:pl-10 truncate focus:w-3/4"
                       />
                     </div>
                   </div>

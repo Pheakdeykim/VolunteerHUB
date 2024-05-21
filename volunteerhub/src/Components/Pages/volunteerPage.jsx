@@ -36,7 +36,7 @@ export default function GetStartPage() {
     <div>
       <NavBar />
       <div className="flex justify-center mt-10">
-        <div className="flex flex-col md:flex-row md:w-full lg:w-3/4 mx-4 bg-gray-100 rounded-lg shadow-xl pb-10">
+        <div className="flex flex-col md:flex-row md:w-full lg:w-3/4 mx-0 md:mx-4 bg-gray-100 rounded-lg shadow-xl pb-10">
           <div
             className={`w-full md:w-1/4 ${
               showFilters ? "block" : "hidden"
@@ -98,10 +98,36 @@ export default function GetStartPage() {
           </div>
           <div className="hidden md:block pl-10"></div>
           <div className="flex flex-col w-full">
-            <div className="w-full md:w-3/4 lg:w-full p-4 md:border-l-2 mt-12 border-gray-400">
+            <div className="w-full p-4 md:border-l-2 mt-12 border-gray-400">
               <div className="flex justify-center">
                 <h1 className="text-2xl font-bold mb-5">Volunteer List</h1>
               </div>
+              <form
+                onSubmit={(e) => e.preventDefault()}
+                className="w-3/4 px-4 mx-auto mb-5"
+              >
+                <div className="relative">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="absolute top-0 bottom-0 w-6 h-6 my-auto text-gray-400 left-3"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    />
+                  </svg>
+                  <input
+                    type="text"
+                    placeholder="Search"
+                    className="w-full py-3 pl-12 pr-4 text-gray-500 rounded-3xl outline-none bg-gray-50 focus:bg-white focus:border-indigo-600"
+                  />
+                </div>
+              </form>
               {/* Show/Hide Filter BTN */}
               <div
                 className={`w-full md:w-1/4 ${
@@ -129,6 +155,8 @@ export default function GetStartPage() {
                   Filter
                 </button>
               </div>
+              {/* End of Show/Hide Filter BTN */}
+              {/* Volunteer Cards */}
               <div className="flex flex-col">
                 <VolunteerCard />
                 <VolunteerCard />
@@ -139,84 +167,86 @@ export default function GetStartPage() {
                 <VolunteerCard />
                 <VolunteerCard />
               </div>
-              
+              {/* End of Volunteer Cards */}
             </div>
+            {/* Pagination */}
             <div className="mt-5">
-                <ol class="flex justify-center gap-1 text-xs font-medium">
-                  <li>
-                    <a
-                      href="/"
-                      class="inline-flex size-8 items-center justify-center rounded border border-gray-100 bg-white text-gray-900 rtl:rotate-180"
+              <ol class="flex justify-center gap-1 text-xs font-medium">
+                <li>
+                  <a
+                    href="/"
+                    class="inline-flex size-8 items-center justify-center rounded border border-gray-100 bg-white text-gray-900 rtl:rotate-180"
+                  >
+                    <span class="sr-only">Prev Page</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-3 w-3"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
                     >
-                      <span class="sr-only">Prev Page</span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-3 w-3"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                    </a>
-                  </li>
-  
-                  <li>
-                    <a
-                      href="/"
-                      class="block size-8 rounded border border-gray-100 bg-white text-center leading-8 text-gray-900"
+                      <path
+                        fill-rule="evenodd"
+                        d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="/"
+                    class="block size-8 rounded border border-gray-100 bg-white text-center leading-8 text-gray-900"
+                  >
+                    1
+                  </a>
+                </li>
+
+                <li class="block size-8 rounded border-blue-600 bg-blue-600 text-center leading-8 text-white">
+                  2
+                </li>
+
+                <li>
+                  <a
+                    href="/"
+                    class="block size-8 rounded border border-gray-100 bg-white text-center leading-8 text-gray-900"
+                  >
+                    3
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="/"
+                    class="block size-8 rounded border border-gray-100 bg-white text-center leading-8 text-gray-900"
+                  >
+                    4
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="/"
+                    class="inline-flex size-8 items-center justify-center rounded border border-gray-100 bg-white text-gray-900 rtl:rotate-180"
+                  >
+                    <span class="sr-only">Next Page</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-3 w-3"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
                     >
-                      1
-                    </a>
-                  </li>
-  
-                  <li class="block size-8 rounded border-blue-600 bg-blue-600 text-center leading-8 text-white">
-                    2
-                  </li>
-  
-                  <li>
-                    <a
-                      href="/"
-                      class="block size-8 rounded border border-gray-100 bg-white text-center leading-8 text-gray-900"
-                    >
-                      3
-                    </a>
-                  </li>
-  
-                  <li>
-                    <a
-                      href="/"
-                      class="block size-8 rounded border border-gray-100 bg-white text-center leading-8 text-gray-900"
-                    >
-                      4
-                    </a>
-                  </li>
-  
-                  <li>
-                    <a
-                      href="/"
-                      class="inline-flex size-8 items-center justify-center rounded border border-gray-100 bg-white text-gray-900 rtl:rotate-180"
-                    >
-                      <span class="sr-only">Next Page</span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-3 w-3"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                    </a>
-                  </li>
-                </ol>
-              </div>
+                      <path
+                        fill-rule="evenodd"
+                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </li>
+              </ol>
+            </div>
+            {/* End of Pagination */}
           </div>
         </div>
       </div>

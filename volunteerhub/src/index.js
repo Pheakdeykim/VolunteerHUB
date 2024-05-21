@@ -14,7 +14,15 @@ import ProfilePage from "./Components/Pages/settingPages/profilePage";
 import SavePage from "./Components/Pages/settingPages/savedPages";
 import JoinPage from "./Components/Pages/settingPages/joinedPage";
 import SettingPage from "./Components/Pages/settingPages/settingPage";
-import MessagePage from "./Components/Pages/messagePage";
+import "flowbite";
+import ChatPages from "./Components/Pages/MessagePages/chatPage";
+import FAQPage from "./Components/Pages/FAQPage.jsx";
+import ContactUs from "./Components/Pages/contactUsPage.jsx";
+import BlogPage from "./Components/Pages/blogPage.jsx";
+import BlogCard from "./Components/Pages/blogCard.jsx";
+import VolunteerInfoPage from "./Components/Pages/volunteerInfoPage.jsx";
+import SchedulePage from "./Components/Pages/settingPages/schedulePage.jsx";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -41,7 +49,7 @@ const router = createBrowserRouter([
     element: <PostVolunteerPage />,
   },
   {
-    path: "/userprofile",
+    path: "/profile",
     element: <ProfilePage />,
   },
   {
@@ -53,12 +61,44 @@ const router = createBrowserRouter([
     element: <JoinPage />,
   },
   {
+    path: "/schedule",
+    element: <SchedulePage />,
+  },
+  {
     path: "/setting",
     element: <SettingPage />,
   },
   {
+    path: "/profile",
+    element: <ProfilePage />,
+  },
+  {
+    path: "/userchat",
+    element: <ChatPages />,
+  },
+  {
     path: "/chat",
-    element: <MessagePage />,
+    element: <ChatPages />,
+  },
+  {
+    path: "/faq",
+    element: <FAQPage />,
+  },
+  {
+    path: "/contactus",
+    element: <ContactUs />,
+  },
+  {
+    path: "/blog",
+    element: <BlogCard />,
+  },
+  {
+    path: "/blogarticle",
+    element: <BlogPage />,
+  },
+  {
+    path: "/volunteerpage",
+    element: <VolunteerInfoPage />,
   },
   {
     path: "*",
